@@ -52,9 +52,9 @@ public class UsuarioControllers {
 
     @PutMapping("/atualizar-usuario/{id}")
     public String atualizarUsuario(@PathVariable Integer id, 
-        @RequestBody Usuario usario
+        @RequestBody Usuario usuario
     ){
-        if (usuarioService.atualizarUsuario(id, usario)!=null) {
+        if (usuarioService.atualizarUsuario(id, usuario)!=null) {
             return "Usuário atualizado com sucesso";
         }
         return "Falha ao atualizar o usário";
